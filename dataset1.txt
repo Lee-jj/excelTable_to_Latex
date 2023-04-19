@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\caption{Clustering performance on dataset1. (The best result is in bold, and the second-best result is underlined.)}
+\label{clusteringResultOnDATASET1}
+\centering
+\scalebox{0.7}
+{
+\begin{tabular}{ccccccccc}
+\toprule
+Dataset&\multicolumn{7}{c}{\textbf{DATASET1}}\\
+\midrule
+Metrics &metics1 &metics2 &metics3 &metics4 &metics5 &metics6 &metics7 \\
+\midrule
+algorithm1 &0.921$\pm$0.000 &0.806$\pm$0.000 &0.921$\pm$0.000 &0.854$\pm$0.000 &0.862$\pm$0.000 &0.858$\pm$0.000 &0.810$\pm$0.000 \\
+algorithm2 &0.919$\pm$0.000 &0.803$\pm$0.000 &0.919$\pm$0.000 &0.851$\pm$0.000 &0.860$\pm$0.000 &0.856$\pm$0.000 &0.807$\pm$0.000 \\
+algorithm3 &0.641$\pm$0.000 &0.601$\pm$0.000 &0.728$\pm$0.000 &0.607$\pm$0.000 &0.767$\pm$0.000 &0.677$\pm$0.000 &0.553$\pm$0.000 \\
+algorithm4 &0.920$\pm$0.000 &0.807$\pm$0.000 &0.920$\pm$0.000 &0.853$\pm$0.000 &0.861$\pm$0.000 &0.857$\pm$0.000 &0.809$\pm$0.000 \\
+algorithm5 &0.892$\pm$0.000 &0.726$\pm$0.000 &0.892$\pm$0.000 &0.808$\pm$0.000 &0.812$\pm$0.000 &0.810$\pm$0.000 &0.747$\pm$0.000 \\
+algorithm6 &0.909$\pm$0.000 &0.774$\pm$0.000 &0.909$\pm$0.000 &0.834$\pm$0.000 &0.841$\pm$0.000 &0.837$\pm$0.000 &0.783$\pm$0.000 \\
+algorithm7 &0.916$\pm$0.000 &0.797$\pm$0.000 &0.916$\pm$0.000 &0.846$\pm$0.000 &0.855$\pm$0.000 &0.850$\pm$0.000 &0.800$\pm$0.000 \\
+algorithm8 &0.663$\pm$0.000 &0.455$\pm$0.000 &0.654$\pm$0.000 &0.510$\pm$0.000 &0.677$\pm$0.000 &0.580$\pm$0.000 &0.413$\pm$0.000 \\
+algorithm9 &0.885$\pm$0.000 &0.715$\pm$0.000 &0.885$\pm$0.000 &0.800$\pm$0.000 &0.795$\pm$0.000 &0.815$\pm$0.000 &0.733$\pm$0.000 \\
+algorithm10 &0.934$\pm$0.000 &0.847$\pm$0.000 &0.934$\pm$0.000 &0.878$\pm$0.000 &0.885$\pm$0.000 &0.881$\pm$0.000 &0.842$\pm$0.000 \\
+algorithm11 &\underline{0.938$\pm$0.000} &\underline{0.861$\pm$0.000} &\underline{0.938$\pm$0.000} &\underline{0.884$\pm$0.000} &\underline{0.891$\pm$0.000} &\underline{0.888$\pm$0.000} &\underline{0.850$\pm$0.000} \\
+ours &\textbf{0.977$\pm$0.000} &\textbf{0.926$\pm$0.000} &\textbf{0.977$\pm$0.000} &\textbf{0.955$\pm$0.000} &\textbf{0.956$\pm$0.000} &\textbf{0.955$\pm$0.000} &\textbf{0.941$\pm$0.000} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

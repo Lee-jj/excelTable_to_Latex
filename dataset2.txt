@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\caption{Clustering performance on dataset2. (The best result is in bold, and the second-best result is underlined.)}
+\label{clusteringResultOnDATASET2}
+\centering
+\scalebox{0.7}
+{
+\begin{tabular}{ccccccccc}
+\toprule
+Dataset&\multicolumn{7}{c}{\textbf{DATASET2}}\\
+\midrule
+Metrics &metics1 &metics2 &metics3 &metics4 &metics5 &metics6 &metics7 \\
+\midrule
+algorithm1 &ERR& & & & & & \\
+algorithm2 &0.067$\pm$0.000 &0.087$\pm$0.000 &0.072$\pm$0.000 &0.021$\pm$0.000 &\textbf{0.732$\pm$0.000} &0.041$\pm$0.000 &0.003$\pm$0.000 \\
+algorithm3 &\underline{0.124$\pm$0.000} &\underline{0.188$\pm$0.000} &\textbf{0.130$\pm$0.000} &0.057$\pm$0.000 &0.059$\pm$0.000 &0.058$\pm$0.000 &0.039$\pm$0.000 \\
+algorithm4 &0.071$\pm$0.000 &0.088$\pm$0.000 &0.074$\pm$0.000 &0.023$\pm$0.000 &0.588$\pm$0.000 &0.044$\pm$0.000 &0.006$\pm$0.000 \\
+algorithm5 &0.108$\pm$0.000 &0.174$\pm$0.000 &\underline{0.112$\pm$0.000} &0.049$\pm$0.000 &0.056$\pm$0.000 &0.052$\pm$0.000 &0.032$\pm$0.000 \\
+algorithm6 &ERR& & & & & & \\
+algorithm7 &0.042$\pm$0.000 &0.044$\pm$0.000 &0.049$\pm$0.000 &0.023$\pm$0.000 &0.592$\pm$0.000 &0.044$\pm$0.000 &0.006$\pm$0.000 \\
+algorithm8 &0.035$\pm$0.000 &0.018$\pm$0.000 &0.035$\pm$0.000 &0.021$\pm$0.000 &\underline{0.689$\pm$0.000} &0.041$\pm$0.000 &0.003$\pm$0.000 \\
+algorithm9 &0.105$\pm$0.000 &0.183$\pm$0.000 &0.111$\pm$0.000 &\underline{0.069$\pm$0.000} &0.047$\pm$0.000 &\underline{0.142$\pm$0.000} &\underline{0.042$\pm$0.000} \\
+algorithm10 &\textbf{0.631$\pm$0.000} &\textbf{0.783$\pm$0.000} & &\textbf{0.498$\pm$0.000} &0.580$\pm$0.000 &\textbf{0.536$\pm$0.000} &\textbf{0.526$\pm$0.000} \\
+algorithm11 & & & & & & & \\
+ours & & & & & & & \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
