@@ -24,5 +24,5 @@ v1.1
 
 v1.2
 1. Joined tkinter library and designed a simple GUI interface.
-2. Try the pyinstaller library and package it as a main.exe file. Test the file can run but open slowly, the file is large.
+2. Try the pyinstaller library and package it as a main.exe file. Test the file can run but open slowly, the file is large.(exe file is too large to upload.)
 [Upadated at 2023.04.22]
