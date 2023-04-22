@@ -1,4 +1,9 @@
 import pandas as pd
+import os
+import tkinter as tk
+from tkinter import *
+import tkinter.ttk
+from tkinter import filedialog
 
 METICS_LEN = 7    # 指标数
 
@@ -74,12 +79,84 @@ def processTable(datasetName, excelPath, savePath):
     f.close()
 
 
+def mkdir(path):
+    folder = os.path.exists(path)
+    if not folder:
+        os.makedirs(path)
+
 
 def main():
-    datasetName = 'dataset2'   # excel的sheet名称
-    excelPath = 'test.xlsx'
-    savePath = datasetName + '.txt'
-    processTable(datasetName, excelPath, savePath)
+    root = tk.Tk() # 创建窗口
+    root.title("Table Change")
+    root.geometry("1000x750")
+    # 提示文本
+    lbl = Label(root, text="请选择excel文件", font=('宋体', 15)).place(x=10, y=10, anchor='nw')
+    lblDataset = Label(root, text="请选择数据集", font=('宋体', 15)).place(x=10, y=55, anchor='nw')
+    lblLatex = Label(root, text="LaTex 表格代码", font=('宋体', 15)).place(x=10, y=100, anchor='nw')
+
+    # 文件路径提示文本
+    lblFile = Label(root, bg='white', width=50, font=('宋体', 15))
+    lblFile.place(x=180, y=10, anchor='nw')
+
+    # 组合框
+    combo = tkinter.ttk.Combobox(root)
+    combo.place(x=180, y=55, anchor='nw')
+
+    # 按钮选择文件
+    def clicked():
+        f_path = filedialog.askopenfilename()
+        lblFile.configure(text=f_path)
+        try:
+            sheetNames = pd.ExcelFile(f_path).sheet_names
+            combo['values'] = sheetNames
+        except:
+            combo['values'] = ()
+    btn = Button(root, text="查询", font=('宋体', 15), command=clicked).place(x=700, y=10, anchor='nw')
+
+    # 创建输出文本框
+    outputTxt = Text(root, width=139, height=46)
+    outputTxt.place(x=10, y=135, anchor='nw')
+
+    # 确定按钮
+    def clickedEnter():
+        try:
+            outputTxt.delete('1.0', 'end')
+            datasetName = combo.get()
+            excelPath = lblFile.cget("text")
+            savePath = './textContent/' + datasetName + '.txt'
+            mkdir('./textContent')
+            processTable(datasetName, excelPath, savePath)
+            f = open(savePath, 'r', encoding='utf-8') # 输出内容到文本框中
+            for lines in f:
+                outputTxt.insert('insert', lines)
+            f.close()
+        except:
+            pass
+    btnEnter = Button(root, text="确定", font=('宋体', 15), command=clickedEnter).place(x=380, y=50, anchor='nw')
+
+    
+
+
+    # excelPath = selectFile()
+    # sheetNames = pd.ExcelFile(excelPath).sheet_names
+    # print(sheetNames)
+    # datasetName = input('enter your dataset name: ')
+    # savePath = datasetName + '.txt'
+    # processTable(datasetName, excelPath, savePath)
+
+      
+    # # 显示到弹窗中, 有bug：关闭窗口程序不结束
+    # if os.path.exists(savePath):       
+             
+    #     text_box = tk.Text(root, width=200, height=50)  # 创建文本框组件       
+    #     text_box.pack() # 添加文本框组件到窗口中       
+    #     f = open(savePath, 'r', encoding='utf-8') # 输出内容到文本框中
+    #     for lines in f:
+    #         text_box.insert('insert', lines)
+    #     f.close()
+
+
+    root.mainloop() # 进入主循环
     print('Done.')
 
 if __name__ == "__main__":
