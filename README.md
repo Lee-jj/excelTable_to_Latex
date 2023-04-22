@@ -19,3 +19,10 @@ v1.1
 3. Disadvantages: Still only the mean and its corresponding variance of exactly seven indicators can be processed
 4. Latex table does not require import packages
 Updated at 2023.04.20
+
+=========================================================
+
+v1.2
+1. Joined tkinter library and designed a simple GUI interface.
+2. Try the pyinstaller library and package it as a main.exe file. Test the file can run but open slowly, the file is large.
+Upadated at 2023.04.22
