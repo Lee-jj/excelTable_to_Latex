@@ -10,7 +10,7 @@ METICS_LEN = 7    # 指标数
 def processTable(datasetName, excelPath, savePath):
     datasetName = datasetName
     savePath = savePath
-    data = pd.read_excel(excelPath, sheet_name=datasetName,header=1)
+    data = pd.read_excel(excelPath, sheet_name=datasetName,header=1) # 0 or 1
 
     # 删除未命名的列
     delList = []
