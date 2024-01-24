@@ -37,14 +37,14 @@ def processTable(datasetName, excelPath, savePath):
     # 写Latex
     f = open(savePath, 'w')
     f.writelines('\\begin{table*}[t]\n')
-    f.writelines('\\caption{Clustering performance on ' + datasetName + '. (The best result is in bold, and the second-best result is underlined.)}\n')
+    f.writelines('\\caption{Clustering performance on ' + datasetName + '}\n')
     f.writelines('\\label{clusteringResultOn' + datasetName.upper() + '}\n')
-    f.writelines('\\centering\n\\scalebox{0.7}\n{\n')
-    f.writelines('\\begin{tabular}{ccccccccc}\n\\toprule\n')
+    f.writelines('\\centering\n\\resizebox{\\textwidth}{!}\n{\n')
+    f.writelines('\\begin{tabular}{ccccccccc}\n\\toprule[2pt]\n')
     f.writelines('Dataset&\\multicolumn{7}{c}{\\textbf{' + datasetName.upper() + '}}\\\\\n')
 
     # 指标
-    f.writelines('\\midrule\nMetrics ')
+    f.writelines('\\midrule[1pt]\nMetrics ')
     for metics in list(data.columns)[:len(best)]:
         f.writelines('&' + metics + ' ')
     f.writelines('\\\\\n\\midrule\n')
@@ -75,7 +75,7 @@ def processTable(datasetName, excelPath, savePath):
         f.writelines('\\\\\n')
 
     # 结尾内容
-    f.writelines('\\bottomrule\n\\end{tabular}\n}\n\\end{table*}\n')
+    f.writelines('\\toprule[2pt]\n\\end{tabular}\n}\n\\end{table*}\n')
     f.close()
 
 
