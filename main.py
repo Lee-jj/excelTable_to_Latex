@@ -13,8 +13,10 @@ def processTable(datasetName, excelPath, savePath, indicesList):
     data = pd.read_excel(excelPath, sheet_name=datasetName, header=1) # 0 or 1
 
     delList = []
+    hasStd = False
     for colName in list(data.columns):
         if '_std' in colName:
+            hasStd = True
             if colName[:-4] not in indicesList:
                 delList.append(colName)
         else:
@@ -25,7 +27,7 @@ def processTable(datasetName, excelPath, savePath, indicesList):
     # print(data.drop(delList, axis=1))
 
     # 记录每个指标最大值与次大值
-    METICS_LEN = len(data.columns) // 2   # 指标数
+    METICS_LEN = len(data.columns) // 2 if hasStd else len(data.columns)   # 指标数
     best = [0] * METICS_LEN
     secondBest = [0] * METICS_LEN
     for idx, matric in enumerate(list(data.columns)[:len(best)]):
