@@ -1,7 +1,7 @@
 # excelTable_to_Latex
 help transform the excel table to a type of Latex table
 
-命令行执行：``python excelTable_to_Latex.py``，选择*template.xlsx*三个sheet其中之一，生成Latex格式的表格文本；
+命令行执行：``python excelTable_to_Latex.py``，选择*template.xlsx*三个sheet其中之一，点击**选择**按钮来选择待输出指标，点击**生成Latex代码**按钮来生成Latex格式的表格文本；
 
 ========================================================
 
@@ -38,3 +38,10 @@ v1.3
 1. 修改表格样式
 
 [Updated at 2024.01.24]
+
+=========================================================
+
+v2.0
+1. 引入下拉复选框，读取文档中的指标，并选择输出指标，参考：[Python tkinter自定义多选下拉列表框(带滚动条、全选)](https://blog.csdn.net/darren922/article/details/132985878)
+
+[Updated at 2024.01.25]
